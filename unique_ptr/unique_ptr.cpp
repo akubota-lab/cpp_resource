@@ -5,32 +5,28 @@
 class A {
 public:
     A() {
-        std::cout << "  // -> A::A()\n" << std::endl;
+        std::cout << "A::A()" << std::endl;
     }
     ~A() {
-        std::cout << "  // -> A::~A()\n" << std::endl;
+        std::cout << "A::~A()" << std::endl;
     }
 };
 
 class B {
 public:
     B() {
-        std::cout << "  // -> B::B()\n" << std::endl;
+        std::cout << "B::B()" << std::endl;
     }
     ~B() {
-        std::cout << "  // -> B::~B()\n" << std::endl;
+        std::cout << "B::~B()" << std::endl;
     }
 };
 
 int main() {
-    std::cout << "int main() {" << std::endl;
-    std::cout << "  A *a = new A();" << std::endl;
-    A *a = new A();
-    std::cout << "  std::unique_ptr<B> b(new B());" << std::endl;
-    std::unique_ptr<B> b(new B());
-    std::cout << "  delete a;" << std::endl;
-    delete a;
-    std::cout << "  return 0;" << std::endl;
-    std::cout << "}" << std::endl;
+    std::cout << ">>>>>>>>>> main()" << std::endl;
+    A *a = new A();                 // A::A()
+    std::unique_ptr<B> b(new B());  // B::B()
+    delete a;                       // A::~A()
+    std::cout << "<<<<<<<<<< main()" << std::endl;
     return 0;
-}
+}                                   // B::~B()

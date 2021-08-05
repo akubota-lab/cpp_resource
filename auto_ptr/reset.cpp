@@ -4,23 +4,20 @@
 class A {
 public:
     A(int i) {
-        std::cout << "  // -> A::A() (m_var = " << i << ")\n" << std::endl;
+        std::cout << "A::A(" << i << ")" << std::endl;
         m_var = i;
     }
     ~A() {
-        std::cout << "  // -> A::~A() (m_var = " << m_var << ")\n" << std::endl;
+        std::cout << "A::~A(" << m_var << ")" << std::endl;
     }
 private:
     int m_var;
 };
 
 int main() {
-    std::cout << "int main() {" << std::endl;
-    std::cout << "  std::auto_ptr<A> a(new A(5))" << std::endl;
-    std::auto_ptr<A> a(new A(5));
-    std::cout << "  a.reset(new A(10))" << std::endl;
-    a.reset(new A(10));
-    std::cout << "  return 0;" << std::endl;
-    std::cout << "}" << std::endl;
+    std::cout << ">>>>>>>>>> main()" << std::endl;
+    std::auto_ptr<A> a(new A(5)); // A::A(5)
+    a.reset(new A(10));           // A::A(10), A::~A(5)
+    std::cout << "<<<<<<<<<< main()" << std::endl;
     return 0;
-}
+}                                 // A::~A(10)
