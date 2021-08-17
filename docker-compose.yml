@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  gcc:
+    build: .
+    container_name: cpp_study
+    volumes:
+      - .:/usr/work
+    tty: true
