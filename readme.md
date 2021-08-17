@@ -4,7 +4,7 @@
 
 ### 環境構築手順
 - リポジトリのクローン  
-```git clone git@github.com:akubota-lab/cpp_resource.git```
+```git clone git@github.com:akubota-lab/cpp_study.git```
 
 - docker, docker-composeのインストール
 - docker コンテナ起動  
