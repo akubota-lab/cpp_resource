@@ -14,8 +14,8 @@
   ```docker exec -it cpp_study bash```
 - コンパイルと実行の確認  
   ```cd src/01/hello```  
-  ```g++ -o ./src/hello/hello.out ./src/hello/hello.cpp```  
-  ```./src/hello/hello ```
+  ```g++ -o hello.out hello.cpp```  
+  ```./hello.out ```
 
 ### リンク
 - [勉強会google drive](https://drive.google.com/drive/folders/1TOsHqS-WhmQut8p7lIOdJPDxP-dhP_4E)
