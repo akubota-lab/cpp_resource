@@ -6,7 +6,7 @@
 - リポジトリのクローン  
 ```git clone git@github.com:akubota-lab/cpp_study.git```
 
-- docker, docker-composeのインストール
+- docker, docker-composeのインストール[こちら](https://docs.docker.jp/compose/install.html#pip)
 - docker コンテナ起動  
   ```cd cpp_resource```  
   ```docker compose up -d```
