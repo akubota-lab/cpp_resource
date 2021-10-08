@@ -1,0 +1,4 @@
+thread:
+real	11m45.251s
+user	1m28.394s
+sys	5m33.141s
